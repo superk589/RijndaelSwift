@@ -1,12 +1,12 @@
 //
 //  Rijndael.swift
-//  RijndaelSwift-iOS
+//  RijndaelSwift
 //
 //  Created by zzk on 28/12/2017.
 //  Copyright © 2017 RijnDaelSwift. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 private let sizes = [16, 24, 32]
 

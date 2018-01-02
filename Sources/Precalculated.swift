@@ -1,12 +1,12 @@
 //
 //  Precalculated.swift
-//  RijnDaelSwift-iOS
+//  RijnDaelSwift
 //
 //  Created by zzk on 28/12/2017.
 //  Copyright © 2017 RijnDaelSwift. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 struct Precalculated {
 

@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
   s.name         = "RijndaelSwift"
-  s.version      = "0.1"
-  s.summary      = ""
+  s.version      = "0.1.0"
+  s.summary      = "Simple Rijndael implementation in Swift"
   s.description  = <<-DESC
-    Your description here.
+    Simple Rijndael implementation in Swift, support key size in [128, 192, 256], block size in [128, 192, 256].
   DESC
   s.homepage     = "https://github.com/superk589/RijndaelSwift"
   s.license      = { :type => "MIT", :file => "LICENSE" }

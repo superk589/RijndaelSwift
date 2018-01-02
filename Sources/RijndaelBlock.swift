@@ -1,6 +1,6 @@
 //
 //  RijndaelBlock.swift
-//  RijndaelSwift-iOS
+//  RijndaelSwift
 //
 //  Created by zzk on 28/12/2017.
 //  Copyright © 2017 RijnDaelSwift. All rights reserved.
@@ -144,7 +144,7 @@ public struct RijndaelBlock {
                 let block = Data(data[start..<end])
                 if let decrypted = cipher.decrypt(block: block) {
                     for j in 0..<blockSize {
-                        plainText[start + j] = decrypted[j] ^ iv[j]
+                        plainText[start + j] = decrypted[j] ^ newIV[j]
                     }
                 }
                 newIV = block
