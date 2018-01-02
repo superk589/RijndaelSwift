@@ -14,20 +14,13 @@
 		122208BB1FFB176800D94B9D /* Precalculated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122208B61FFB176800D94B9D /* Precalculated.swift */; };
 		122208BC1FFB176800D94B9D /* Precalculated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122208B61FFB176800D94B9D /* Precalculated.swift */; };
 		122208BD1FFB176800D94B9D /* Precalculated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122208B61FFB176800D94B9D /* Precalculated.swift */; };
-		122208BF1FFB178200D94B9D /* RijndaelBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122208BE1FFB178200D94B9D /* RijndaelBlock.swift */; };
-		122208C01FFB178200D94B9D /* RijndaelBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122208BE1FFB178200D94B9D /* RijndaelBlock.swift */; };
-		122208C11FFB178200D94B9D /* RijndaelBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122208BE1FFB178200D94B9D /* RijndaelBlock.swift */; };
-		122208C21FFB178200D94B9D /* RijndaelBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122208BE1FFB178200D94B9D /* RijndaelBlock.swift */; };
-		122208C31FFB178200D94B9D /* RijndaelBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122208BE1FFB178200D94B9D /* RijndaelBlock.swift */; };
-		122208C41FFB178200D94B9D /* RijndaelBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122208BE1FFB178200D94B9D /* RijndaelBlock.swift */; };
-		122208C51FFB178200D94B9D /* RijndaelBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122208BE1FFB178200D94B9D /* RijndaelBlock.swift */; };
-		122208C71FFB1C9E00D94B9D /* Rijndael.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122208C61FFB1C9E00D94B9D /* Rijndael.swift */; };
-		122208C81FFB1C9E00D94B9D /* Rijndael.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122208C61FFB1C9E00D94B9D /* Rijndael.swift */; };
-		122208C91FFB1C9E00D94B9D /* Rijndael.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122208C61FFB1C9E00D94B9D /* Rijndael.swift */; };
-		122208CA1FFB1C9E00D94B9D /* Rijndael.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122208C61FFB1C9E00D94B9D /* Rijndael.swift */; };
-		122208CB1FFB1C9E00D94B9D /* Rijndael.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122208C61FFB1C9E00D94B9D /* Rijndael.swift */; };
-		122208CC1FFB1C9E00D94B9D /* Rijndael.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122208C61FFB1C9E00D94B9D /* Rijndael.swift */; };
-		122208CD1FFB1C9E00D94B9D /* Rijndael.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122208C61FFB1C9E00D94B9D /* Rijndael.swift */; };
+		122208BF1FFB178200D94B9D /* Rijndael.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122208BE1FFB178200D94B9D /* Rijndael.swift */; };
+		122208C01FFB178200D94B9D /* Rijndael.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122208BE1FFB178200D94B9D /* Rijndael.swift */; };
+		122208C11FFB178200D94B9D /* Rijndael.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122208BE1FFB178200D94B9D /* Rijndael.swift */; };
+		122208C21FFB178200D94B9D /* Rijndael.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122208BE1FFB178200D94B9D /* Rijndael.swift */; };
+		122208C31FFB178200D94B9D /* Rijndael.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122208BE1FFB178200D94B9D /* Rijndael.swift */; };
+		122208C41FFB178200D94B9D /* Rijndael.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122208BE1FFB178200D94B9D /* Rijndael.swift */; };
+		122208C51FFB178200D94B9D /* Rijndael.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122208BE1FFB178200D94B9D /* Rijndael.swift */; };
 		12F76DB81FFB39C100AB214B /* k256-b256.txt in Resources */ = {isa = PBXBuildFile; fileRef = 12F76DB31FFB39C100AB214B /* k256-b256.txt */; };
 		12F76DB91FFB39C100AB214B /* k256-b256.txt in Resources */ = {isa = PBXBuildFile; fileRef = 12F76DB31FFB39C100AB214B /* k256-b256.txt */; };
 		12F76DBA1FFB39C100AB214B /* k256-b256.txt in Resources */ = {isa = PBXBuildFile; fileRef = 12F76DB31FFB39C100AB214B /* k256-b256.txt */; };
@@ -50,6 +43,13 @@
 		12F76DCC1FFB4F7100AB214B /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F76DC71FFB4F7100AB214B /* Utility.swift */; };
 		12F76DCD1FFB4F7100AB214B /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F76DC71FFB4F7100AB214B /* Utility.swift */; };
 		12F76DCE1FFB4F7100AB214B /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F76DC71FFB4F7100AB214B /* Utility.swift */; };
+		12F76DD01FFB7A1000AB214B /* RijndaelBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F76DCF1FFB7A1000AB214B /* RijndaelBlock.swift */; };
+		12F76DD11FFB7A1000AB214B /* RijndaelBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F76DCF1FFB7A1000AB214B /* RijndaelBlock.swift */; };
+		12F76DD21FFB7A1000AB214B /* RijndaelBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F76DCF1FFB7A1000AB214B /* RijndaelBlock.swift */; };
+		12F76DD31FFB7A1000AB214B /* RijndaelBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F76DCF1FFB7A1000AB214B /* RijndaelBlock.swift */; };
+		12F76DD41FFB7A1000AB214B /* RijndaelBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F76DCF1FFB7A1000AB214B /* RijndaelBlock.swift */; };
+		12F76DD51FFB7A1000AB214B /* RijndaelBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F76DCF1FFB7A1000AB214B /* RijndaelBlock.swift */; };
+		12F76DD61FFB7A1000AB214B /* RijndaelBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F76DCF1FFB7A1000AB214B /* RijndaelBlock.swift */; };
 		52D6D9871BEFF229002C0205 /* RijndaelSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* RijndaelSwift.framework */; };
 		8933C78E1EB5B82C000D00A4 /* RijndaelSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7891EB5B82A000D00A4 /* RijndaelSwiftTests.swift */; };
 		8933C78F1EB5B82C000D00A4 /* RijndaelSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7891EB5B82A000D00A4 /* RijndaelSwiftTests.swift */; };
@@ -84,14 +84,14 @@
 
 /* Begin PBXFileReference section */
 		122208B61FFB176800D94B9D /* Precalculated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Precalculated.swift; sourceTree = "<group>"; };
-		122208BE1FFB178200D94B9D /* RijndaelBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RijndaelBlock.swift; sourceTree = "<group>"; };
-		122208C61FFB1C9E00D94B9D /* Rijndael.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rijndael.swift; sourceTree = "<group>"; };
+		122208BE1FFB178200D94B9D /* Rijndael.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rijndael.swift; sourceTree = "<group>"; };
 		12F76DB31FFB39C100AB214B /* k256-b256.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "k256-b256.txt"; sourceTree = "<group>"; };
 		12F76DB41FFB39C100AB214B /* k256-b192.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "k256-b192.txt"; sourceTree = "<group>"; };
 		12F76DB51FFB39C100AB214B /* k192-b128.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "k192-b128.txt"; sourceTree = "<group>"; };
 		12F76DB61FFB39C100AB214B /* k128-b128.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "k128-b128.txt"; sourceTree = "<group>"; };
 		12F76DB71FFB39C100AB214B /* k256-b128.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "k256-b128.txt"; sourceTree = "<group>"; };
 		12F76DC71FFB4F7100AB214B /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		12F76DCF1FFB7A1000AB214B /* RijndaelBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RijndaelBlock.swift; sourceTree = "<group>"; };
 		52D6D97C1BEFF229002C0205 /* RijndaelSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RijndaelSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9861BEFF229002C0205 /* RijndaelSwift-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RijndaelSwift-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9E21BEFFF6E002C0205 /* RijndaelSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RijndaelSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -209,9 +209,9 @@
 			isa = PBXGroup;
 			children = (
 				122208B61FFB176800D94B9D /* Precalculated.swift */,
-				122208C61FFB1C9E00D94B9D /* Rijndael.swift */,
+				12F76DCF1FFB7A1000AB214B /* RijndaelBlock.swift */,
 				12F76DC71FFB4F7100AB214B /* Utility.swift */,
-				122208BE1FFB178200D94B9D /* RijndaelBlock.swift */,
+				122208BE1FFB178200D94B9D /* Rijndael.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -538,9 +538,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				122208B71FFB176800D94B9D /* Precalculated.swift in Sources */,
+				12F76DD01FFB7A1000AB214B /* RijndaelBlock.swift in Sources */,
 				12F76DC81FFB4F7100AB214B /* Utility.swift in Sources */,
-				122208C71FFB1C9E00D94B9D /* Rijndael.swift in Sources */,
-				122208BF1FFB178200D94B9D /* RijndaelBlock.swift in Sources */,
+				122208BF1FFB178200D94B9D /* Rijndael.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,11 +548,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12F76DD41FFB7A1000AB214B /* RijndaelBlock.swift in Sources */,
 				8933C7901EB5B82D000D00A4 /* RijndaelSwiftTests.swift in Sources */,
 				122208BB1FFB176800D94B9D /* Precalculated.swift in Sources */,
-				122208CB1FFB1C9E00D94B9D /* Rijndael.swift in Sources */,
 				12F76DCC1FFB4F7100AB214B /* Utility.swift in Sources */,
-				122208C31FFB178200D94B9D /* RijndaelBlock.swift in Sources */,
+				122208C31FFB178200D94B9D /* Rijndael.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,9 +561,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				122208B91FFB176800D94B9D /* Precalculated.swift in Sources */,
+				12F76DD21FFB7A1000AB214B /* RijndaelBlock.swift in Sources */,
 				12F76DCA1FFB4F7100AB214B /* Utility.swift in Sources */,
-				122208C91FFB1C9E00D94B9D /* Rijndael.swift in Sources */,
-				122208C11FFB178200D94B9D /* RijndaelBlock.swift in Sources */,
+				122208C11FFB178200D94B9D /* Rijndael.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,9 +572,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				122208BA1FFB176800D94B9D /* Precalculated.swift in Sources */,
+				12F76DD31FFB7A1000AB214B /* RijndaelBlock.swift in Sources */,
 				12F76DCB1FFB4F7100AB214B /* Utility.swift in Sources */,
-				122208CA1FFB1C9E00D94B9D /* Rijndael.swift in Sources */,
-				122208C21FFB178200D94B9D /* RijndaelBlock.swift in Sources */,
+				122208C21FFB178200D94B9D /* Rijndael.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,9 +583,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				122208B81FFB176800D94B9D /* Precalculated.swift in Sources */,
+				12F76DD11FFB7A1000AB214B /* RijndaelBlock.swift in Sources */,
 				12F76DC91FFB4F7100AB214B /* Utility.swift in Sources */,
-				122208C81FFB1C9E00D94B9D /* Rijndael.swift in Sources */,
-				122208C01FFB178200D94B9D /* RijndaelBlock.swift in Sources */,
+				122208C01FFB178200D94B9D /* Rijndael.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,11 +593,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12F76DD51FFB7A1000AB214B /* RijndaelBlock.swift in Sources */,
 				8933C78F1EB5B82C000D00A4 /* RijndaelSwiftTests.swift in Sources */,
 				122208BC1FFB176800D94B9D /* Precalculated.swift in Sources */,
-				122208CC1FFB1C9E00D94B9D /* Rijndael.swift in Sources */,
 				12F76DCD1FFB4F7100AB214B /* Utility.swift in Sources */,
-				122208C41FFB178200D94B9D /* RijndaelBlock.swift in Sources */,
+				122208C41FFB178200D94B9D /* Rijndael.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,11 +605,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12F76DD61FFB7A1000AB214B /* RijndaelBlock.swift in Sources */,
 				8933C78E1EB5B82C000D00A4 /* RijndaelSwiftTests.swift in Sources */,
 				122208BD1FFB176800D94B9D /* Precalculated.swift in Sources */,
-				122208CD1FFB1C9E00D94B9D /* Rijndael.swift in Sources */,
 				12F76DCE1FFB4F7100AB214B /* Utility.swift in Sources */,
-				122208C51FFB178200D94B9D /* RijndaelBlock.swift in Sources */,
+				122208C51FFB178200D94B9D /* Rijndael.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
