@@ -81,6 +81,10 @@ let plainData = r.decrypt(data: cipherData, blockSize: 32, iv: iv)
 ### Utility for String and Data conversion
 
 ```Swift
-let data = "00000".hexadecimal()!
+let data = "000000".hexadecimal()!
 let string = data.hexadecimal()
 ```
+
+## Acknowledgement
+
+[rijndael-js](https://github.com/Snack-X/rijndael-js) by [Snack-X](https://github.com/Snack-X)
