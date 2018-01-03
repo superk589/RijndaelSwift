@@ -48,7 +48,7 @@ private func rcon(_ index: Int) -> UInt8 {
     return Precalculated.rcon[index]
 }
 
-public struct RijndaelBlock {
+struct RijndaelBlock {
     
     let key: Data
     

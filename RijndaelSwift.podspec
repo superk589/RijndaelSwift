@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "RijndaelSwift"
-  s.version      = "0.1.1"
+  s.version      = "0.1.2"
   s.summary      = "Simple Rijndael implementation in Swift"
   s.description  = <<-DESC
     Simple Rijndael implementation in Swift, support key size in [128, 192, 256], block size in [128, 192, 256].

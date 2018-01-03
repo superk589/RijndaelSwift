@@ -17,12 +17,12 @@ private let sizes = [16, 24, 32]
 
 public struct Rijndael {
     
-    let key: Data
-    let mode: Mode
+    public let key: Data
+    public let mode: Mode
 
-    let keySize: Int
+    public let keySize: Int
     
-    init?(key: Data, mode: Mode) {
+    public init?(key: Data, mode: Mode) {
         if !sizes.contains(key.count) {
             return nil
         }
@@ -32,7 +32,14 @@ public struct Rijndael {
     }
     
     
-    func encrypt(data: Data, blockSize: Int, iv: Data) -> Data? {
+    /// encrypt plain data to cipher data
+    ///
+    /// - Parameters:
+    ///   - data: plain data
+    ///   - blockSize: size in bytes
+    ///   - iv: iv data
+    /// - Returns: encrypted cipher data
+    public func encrypt(data: Data, blockSize: Int, iv: Data?) -> Data? {
         
         if blockSize <= 32 && !sizes.contains(blockSize) {
             return nil
@@ -43,7 +50,7 @@ public struct Rijndael {
         }
         
         if mode == .cbc {
-            if iv.count != blockSize {
+            if iv?.count != blockSize {
                 return nil
             }
         }
@@ -76,7 +83,7 @@ public struct Rijndael {
                 }
             }
         case .cbc:
-            var newIV = iv
+            var newIV = iv!
             for i in 0..<blockCount {
                 let start = i * blockSize
                 let end = (i + 1) * blockSize
@@ -97,7 +104,14 @@ public struct Rijndael {
         return cipherText
     }
     
-    func decrypt(data: Data, blockSize: Int, iv: Data) -> Data? {
+    /// decrypt cipher data to plain data
+    ///
+    /// - Parameters:
+    ///   - data: cipher data
+    ///   - blockSize: size in bytes
+    ///   - iv: iv data
+    /// - Returns: decrypted plain data
+    public func decrypt(data: Data, blockSize: Int, iv: Data?) -> Data? {
         
         if blockSize <= 32 && !sizes.contains(blockSize) {
             return nil
@@ -108,7 +122,7 @@ public struct Rijndael {
         }
         
         if mode == .cbc {
-            if iv.count != blockSize {
+            if iv?.count != blockSize {
                 return nil
             }
         }
@@ -137,7 +151,7 @@ public struct Rijndael {
                 }
             }
         case .cbc:
-            var newIV = iv
+            var newIV = iv!
             for i in 0..<blockCount {
                 let start = i * blockSize
                 let end = (i + 1) * blockSize

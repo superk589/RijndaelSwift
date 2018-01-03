@@ -61,10 +61,10 @@ If you prefer not to use either of the aforementioned dependency managers, you c
 ### Encrypt
 
 ```Swift
-let key: Data = yourKey
-let iv: Data = yourIV // for ecb, use empty data "Data()" instead
+let key = yourKey
+let iv = yourIV
 let r = Rijndael(key: key, mode: .cbc)!
-let plainData: Data = yourPlainData
+let plainData = yourPlainData
 let cipherData = r.encrypt(data: plainData, blockSize: 32, iv: iv)
 ```
       
@@ -72,16 +72,20 @@ let cipherData = r.encrypt(data: plainData, blockSize: 32, iv: iv)
 
 ```Swift
 let key = yourKey
-let iv = yourIV // for ecb, use empty data "Data()" instead
+let iv = yourIV
 let r = Rijndael(key: key, mode: .cbc)!
-let cipherData = yourPlainData
+let cipherData = yourCipherData
 let plainData = r.decrypt(data: cipherData, blockSize: 32, iv: iv)
 ```
 
 ### Utility for String and Data conversion
 
 ```Swift
+
+// convert hexadecimal string to data
 let data = "000000".hexadecimal()!
+
+// convert data to hexadecimal string
 let string = data.hexadecimal()
 ```
 

@@ -10,7 +10,7 @@ import Foundation
 
 public extension Data {
     
-    func hexadecimal() -> String {
+    public func hexadecimal() -> String {
         return map { String(format: "%02x", $0) }
             .joined(separator: "")
     }
@@ -19,7 +19,7 @@ public extension Data {
 
 public extension String {
     
-    func hexadecimal() -> Data? {
+    public func hexadecimal() -> Data? {
         let len = count / 2
         var data = Data(capacity: len)
         for i in 0..<len {
