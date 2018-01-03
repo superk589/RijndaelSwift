@@ -75,7 +75,7 @@ public struct Rijndael {
             for i in 0..<blockCount {
                 let start = i * blockSize
                 let end = (i + 1) * blockSize
-                let block = _data[start..<end]
+                let block = Data(_data[start..<end])
                 if let encrypted = cipher.encrypt(block: block) {
                     for j in 0..<blockSize {
                         cipherText[start + j] = encrypted[j]
@@ -87,7 +87,7 @@ public struct Rijndael {
             for i in 0..<blockCount {
                 let start = i * blockSize
                 let end = (i + 1) * blockSize
-                var block = _data[start..<end]
+                var block = Data(_data[start..<end])
                 
                 for j in 0..<blockSize {
                     block[j] ^= newIV[j]
