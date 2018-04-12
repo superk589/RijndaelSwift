@@ -69,12 +69,12 @@ class RijndaelSwiftTests: XCTestCase {
     func testReversible() {
         let r = Rijndael(key: "0000000002000000000000000000000000000000000000000000000000000000".hexadecimal()!, mode: .cbc)
         let iv = "0000000008000000000000000000000000000000000000000000000000000000".hexadecimal()!
-        let p = "0000000000000000000000000000000000000000000000000000000000000000".hexadecimal()!
+        let p = "abcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcd".hexadecimal()!
         
         let cipher = r?.encrypt(data: p, blockSize: 32, iv: iv)
         let plain = r?.decrypt(data: cipher!, blockSize: 32, iv: iv)
         
-        XCTAssert(plain?.hexadecimal() == "0000000000000000000000000000000000000000000000000000000000000000")
+        XCTAssert(plain?.split(separator: 0)[0] == p)
     }
     
 }

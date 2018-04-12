@@ -160,6 +160,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1221CEA7207EF177008F30AA /* RijndaelSwift */ = {
+			isa = PBXGroup;
+			children = (
+				122208B61FFB176800D94B9D /* Precalculated.swift */,
+				12F76DCF1FFB7A1000AB214B /* RijndaelBlock.swift */,
+				12F76DC71FFB4F7100AB214B /* Utility.swift */,
+				122208BE1FFB178200D94B9D /* Rijndael.swift */,
+			);
+			path = RijndaelSwift;
+			sourceTree = "<group>";
+		};
 		12F76DB21FFB39C100AB214B /* data */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,10 +219,7 @@
 		8933C7811EB5B7E0000D00A4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				122208B61FFB176800D94B9D /* Precalculated.swift */,
-				12F76DCF1FFB7A1000AB214B /* RijndaelBlock.swift */,
-				12F76DC71FFB4F7100AB214B /* Utility.swift */,
-				122208BE1FFB178200D94B9D /* Rijndael.swift */,
+				1221CEA7207EF177008F30AA /* RijndaelSwift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
