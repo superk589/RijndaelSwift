@@ -76,7 +76,7 @@ struct RijndaelBlock {
         for i in stride(from: keySize, to: expandKey.count, by: 4) {
             var temp = Data(expandKey[i - 4..<i])
             if i % keySize == 0 {
-                temp = Data(bytes: [
+                temp = Data([
                     sbox(temp[1]) ^ rcon(rconIndex),
                     sbox(temp[2]),
                     sbox(temp[3]),
@@ -97,7 +97,7 @@ struct RijndaelBlock {
             }
             
             if keySize == 32 && i % keySize == 16 {
-                temp = Data(bytes: [
+                temp = Data([
                     sbox(temp[0]),
                     sbox(temp[1]),
                     sbox(temp[2]),
@@ -132,7 +132,7 @@ struct RijndaelBlock {
     
     func subBytesReversed(block: inout Data) {
         for i in 0..<block.count {
-            block[i] = UInt8(Precalculated.sbox.index(of: block[i])!)
+            block[i] = UInt8(Precalculated.sbox.firstIndex(of: block[i])!)
         }
     }
     
@@ -149,7 +149,7 @@ struct RijndaelBlock {
     func shiftRowsReversed(block: inout Data) {
         var output = Data()
         for i in 0..<block.count {
-            output.append(block[Precalculated.rowShift[block.count]!.index(of: i)!])
+            output.append(block[Precalculated.rowShift[block.count]!.firstIndex(of: i)!])
         }
         for i in 0..<block.count {
             block[i] = output[i]

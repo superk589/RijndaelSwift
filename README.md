@@ -5,8 +5,8 @@ This is an implementation of Rijndael algorithm.
 Supports 128/192/256 bit key/block, and ECB, CBC modes.
 
 ## Requirements
-* Xcode 9.0+
-* Swift 4.0+
+* Xcode 10.2+
+* Swift 5.0+
 
 ## Installation
 
