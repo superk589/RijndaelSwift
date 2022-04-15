@@ -77,4 +77,130 @@ class RijndaelSwiftTests: XCTestCase {
         XCTAssert(plain?.split(separator: 0)[0] == p)
     }
     
+    func testZeroPadding() {
+        guard let key = "abcdefabcdefabcd".data(using: .utf8) else {
+            XCTAssertTrue(false, "Unable to create a valid key.")
+            return
+        }
+        let iv = "abcdefabcdefabcd".data(using: .utf8)
+        
+        guard let dataToEncrypt = "abcdefabcdef".data(using: .utf8) else {
+            XCTAssertTrue(false, "Unable to initialize the input data.")
+            return
+        }
+        
+        let rjn = Rijndael.init(key: key, mode: .cbc, padding: .zero)
+        if let data = rjn?.encrypt(data: dataToEncrypt, blockSize: 16, iv: iv) {
+            let result = "eb1b992985b21adfbb19d5197c1c3442" //.zero
+            XCTAssertEqual(result, data.hexadecimal(), "The expected value desn't match.")
+        } else {
+            XCTAssertTrue(false, "Unable to encrypt the data.")
+        }
+    }
+    
+    func testPKCS7Padding() {
+        guard let key = "abcdefabcdefabcd".data(using: .utf8) else {
+            XCTAssertTrue(false, "Unable to create a valid key.")
+            return
+        }
+        let iv = "abcdefabcdefabcd".data(using: .utf8)
+        
+        guard let dataToEncrypt = "abcdefabcdef".data(using: .utf8) else {
+            XCTAssertTrue(false, "Unable to initialize the input data.")
+            return
+        }
+        
+        let rjn = Rijndael.init(key: key, mode: .cbc, padding: .pkcs7)
+        if let data = rjn?.encrypt(data: dataToEncrypt, blockSize: 16, iv: iv) {
+            let result = "2f4371f9f7e35c3c7065788adb17417a" //.pkcs7, .
+            XCTAssertEqual(result, data.hexadecimal(), "The expected value desn't match.")
+        } else {
+            XCTAssertTrue(false, "Unable to encrypt the data.")
+        }
+    }
+    
+    func testANSIX923Padding() {
+        guard let key = "abcdefabcdefabcd".data(using: .utf8) else {
+            XCTAssertTrue(false, "Unable to create a valid key.")
+            return
+        }
+        let iv = "abcdefabcdefabcd".data(using: .utf8)
+        
+        guard let dataToEncrypt = "abcdefabcdef".data(using: .utf8) else {
+            XCTAssertTrue(false, "Unable to initialize the input data.")
+            return
+        }
+        
+        let rjn = Rijndael.init(key: key, mode: .cbc, padding: .ansix923)
+        if let data = rjn?.encrypt(data: dataToEncrypt, blockSize: 16, iv: iv) {
+            let result = "594b4796c24d898c4aa0eb516b740d82" //.ansix923
+            XCTAssertEqual(result, data.hexadecimal(), "The expected value desn't match.")
+        } else {
+            XCTAssertTrue(false, "Unable to encrypt the data.")
+        }
+    }
+    
+    func testZeroPaddingDecode() {
+        guard let key = "abcdefabcdefabcd".data(using: .utf8) else {
+            XCTAssertTrue(false, "Unable to create a valid key.")
+            return
+        }
+        let iv = "abcdefabcdefabcd".data(using: .utf8)
+        
+        guard let dataToDecrypt = "eb1b992985b21adfbb19d5197c1c3442".hexadecimal() else {
+            XCTAssertTrue(false, "Unable to initialize the input data.")
+            return
+        }
+        
+        let rjn = Rijndael.init(key: key, mode: .cbc, padding: .zero)
+        if let data = rjn?.decrypt(data: dataToDecrypt, blockSize: 16, iv: iv) {
+            let result = "abcdefabcdef" //.zero
+            XCTAssertEqual(result, String(data: data, encoding: .utf8), "The expected value desn't match.")
+        } else {
+            XCTAssertTrue(false, "Unable to encrypt the data.")
+        }
+    }
+    
+    func testPKCS7PaddingDecode() {
+        guard let key = "abcdefabcdefabcd".data(using: .utf8) else {
+            XCTAssertTrue(false, "Unable to create a valid key.")
+            return
+        }
+        let iv = "abcdefabcdefabcd".data(using: .utf8)
+        
+        guard let dataToDecrypt = "2f4371f9f7e35c3c7065788adb17417a".hexadecimal() else {
+            XCTAssertTrue(false, "Unable to initialize the input data.")
+            return
+        }
+        
+        let rjn = Rijndael.init(key: key, mode: .cbc, padding: .pkcs7)
+        if let data = rjn?.decrypt(data: dataToDecrypt, blockSize: 16, iv: iv) {
+            let result = "abcdefabcdef" //.zero
+            XCTAssertEqual(result, String(data: data, encoding: .utf8), "The expected value desn't match.")
+        } else {
+            XCTAssertTrue(false, "Unable to encrypt the data.")
+        }
+    }
+    
+    func testANSIX923PaddingDecode() {
+        guard let key = "abcdefabcdefabcd".data(using: .utf8) else {
+            XCTAssertTrue(false, "Unable to create a valid key.")
+            return
+        }
+        let iv = "abcdefabcdefabcd".data(using: .utf8)
+        
+        guard let dataToDecrypt = "594b4796c24d898c4aa0eb516b740d82".hexadecimal() else {
+            XCTAssertTrue(false, "Unable to initialize the input data.")
+            return
+        }
+        
+        let rjn = Rijndael.init(key: key, mode: .cbc, padding: .pkcs7)
+        if let data = rjn?.decrypt(data: dataToDecrypt, blockSize: 16, iv: iv) {
+            let result = "abcdefabcdef" //.zero
+            XCTAssertEqual(result, String(data: data, encoding: .utf8), "The expected value desn't match.")
+        } else {
+            XCTAssertTrue(false, "Unable to encrypt the data.")
+        }
+    }
+    
 }

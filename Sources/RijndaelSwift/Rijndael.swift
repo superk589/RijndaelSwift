@@ -13,6 +13,14 @@ public enum Mode {
     case cbc
 }
 
+public enum Padding {
+    case no // behaves like .zero
+    case pkcs7 // new version
+    case ansix923 // TBD, behaves like .zero
+    case iso10126 // behaves like pkcs7
+    case zero // default one 
+}
+
 private let sizes = [16, 24, 32]
 
 public struct Rijndael {
@@ -21,14 +29,16 @@ public struct Rijndael {
     public let mode: Mode
 
     public let keySize: Int
+    public let padding: Padding
     
-    public init?(key: Data, mode: Mode) {
+    public init?(key: Data, mode: Mode, padding: Padding = .zero) {
         if !sizes.contains(key.count) {
             return nil
         }
         self.mode = mode
         self.key = key
         self.keySize = key.count
+        self.padding = padding
     }
     
     
@@ -60,8 +70,33 @@ public struct Rijndael {
         if padLength != 0 {
             padLength = blockSize - padLength
         }
-        for _ in 0..<padLength {
-            _data.append(0)
+        
+        let extraByte: UInt8
+        switch(padding) {
+            case .no:
+                break
+            case .pkcs7, .iso10126:
+                if padLength == 0 {
+                    padLength = blockSize
+                }
+                extraByte = UInt8(padLength)
+                for _ in 0..<padLength {
+                    _data.append(extraByte)
+                }
+            case .ansix923:
+                extraByte = UInt8(padLength)
+                if padLength >= 1 {
+                    let zero = UInt8(0)
+                    for _ in 0..<(padLength - 1) {
+                        _data.append(zero)
+                    }
+                    _data.append(extraByte)
+                }
+            case .zero:
+                extraByte = UInt8(0)
+                for _ in 0..<padLength {
+                    _data.append(extraByte)
+                }
         }
         
         let blockCount = _data.count / blockSize
@@ -163,6 +198,31 @@ public struct Rijndael {
                 }
                 newIV = block
             }
+        }
+        
+        switch (padding) {
+        case .zero:
+            for _ in 0..<blockSize {
+                if let last = plainText.last, last == 0 {
+                    plainText.removeLast()
+                } else {
+                    break
+                }
+            }
+        case .pkcs7:
+            if let size = plainText.last {
+                for _ in 0..<size {
+                    plainText.removeLast()
+                }
+            }
+        case .ansix923:
+            if let size = plainText.last {
+                for _ in 0..<size {
+                    plainText.removeLast()
+                }
+            }
+        default:
+            break
         }
         return plainText
     }
